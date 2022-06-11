@@ -145,6 +145,76 @@ function carispd(chtId, cmd){
   
 }
 
+//fungsi cari data proses
+function cariproses(chtId, cmd){
+  var txt = '';
+  var item = cmd.match(/cariproses/i);
+  var cekData = false;
+  var rs = bacaData();
+  
+  for (var i=0; i<rs.length; i++){   
+    if (rs[i][6] == 'PROSES 🔄'){
+      cekData = true;
+    }
+  }
+  
+  if (cekData == true){
+    for (var x=0; x<rs.length; x++){
+      if (rs[x][6] == 'PROSES 🔄'){
+        txt = 
+          '📝 <b>Menampilkan Data Yang Belum Selesai' + '</b>\n'
+          + '__________________________________________' + '\n\n'
+          + '• <b>TANGGAL :</b> ' + rs[x][1] + '\n'
+          + '• <b>KODE :</b> ' + rs[x][2] + '\n'
+          + '• <b>TOKO :</b> ' + rs[x][3] + '\n' 
+          + '• <b>UKURAN :</b> ' + rs[x][4] + '\n'
+          + '• <b>PIC :</b> ' + rs[x][5] + '\n' 
+          + '• <b>STATUS :</b> ' + rs[x][6] + '\n';
+        sendText(chtId,txt);
+      }
+    }
+  }else{
+    txt = 'Tidak ada data!';
+    sendText(chtId, txt);
+  }
+ 
+}
+
+//fungsi cari data done
+function caridone(chtId, cmd){
+  var txt = '';
+  var item = cmd.match(/caridone/i);
+  var cekData = false;
+  var rs = bacaData();
+  
+  for (var i=0; i<rs.length; i++){   
+    if (rs[i][6] == 'DONE ✅'){
+      cekData = true;
+    }
+  }
+  
+  if (cekData == true){
+    for (var x=0; x<rs.length; x++){
+      if (rs[x][6] == 'DONE ✅'){
+        txt = 
+          '📝 <b>Menampilkan Data Yang Sudah Selesai' + '</b>\n'
+          + '__________________________________________' + '\n\n'
+          + '• <b>TANGGAL :</b> ' + rs[x][1] + '\n'
+          + '• <b>KODE :</b> ' + rs[x][2] + '\n'
+          + '• <b>TOKO :</b> ' + rs[x][3] + '\n' 
+          + '• <b>UKURAN :</b> ' + rs[x][4] + '\n'
+          + '• <b>PIC :</b> ' + rs[x][5] + '\n' 
+          + '• <b>STATUS :</b> ' + rs[x][6] + '\n';
+        sendText(chtId,txt);
+      }
+    }
+  }else{
+    txt = 'Tidak ada data!';
+    sendText(chtId, txt);
+  }
+  
+}
+
 //fungsi cari semua data
 function cariall(chtId, cmd){
   var txt = '';
