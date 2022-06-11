@@ -53,6 +53,12 @@ function doPost(e){
   if (cmd.substr(0,8) == '/carispd'){
     carispd(chtId, cmd);
   }
+  if (cmd.substr(0,12) == '/cariproses'){
+    cariproses(chtId, cmd);
+  }
+  if (cmd.substr(0,9) == '/caridone'){
+    caridone(chtId, cmd);
+  }
   if (cmd.substr(0,5) == 'hapus'){
     hapus(chtId, cmd);
   }
