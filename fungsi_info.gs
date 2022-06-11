@@ -15,11 +15,13 @@ function help(chtId, cmd) {
   + "2. /edit - Untuk mengubah data" + "\n"
   + "3. /caripnt - Untuk menampilkan data PNT" + "\n"
   + "4. /carispd - Untuk menampilkan data SPD" + "\n"
-  + "5. /cariall - Untuk menampilkan semua data" + "\n"
-  + "6. /carino - Untuk menampilkan no yang sudah ada" + "\n"
-  + "7. /hapus - Untuk menghapus data" + "\n"
-  + "8. /help - Untuk bantuan" + "\n"
-  + "9. /format - Contoh penulisan perintah"; 
+  + "5. /cariproses - Untuk menampilkan data proses" + "\n"
+  + "6. /caridone - Untuk menampilkan data done" + "\n"
+  + "7. /cariall - Untuk menampilkan semua data" + "\n"
+  + "8. /carino - Untuk menampilkan no yang sudah ada" + "\n"
+  + "9. /hapus - Untuk menghapus data" + "\n"
+  + "10. /help - Untuk bantuan" + "\n"
+  + "11. /format - Contoh penulisan perintah"; 
   
   sendText(chtId, txtHelp);
 }
