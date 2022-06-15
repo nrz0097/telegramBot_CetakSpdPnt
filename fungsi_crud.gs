@@ -7,7 +7,6 @@ function tambah(chtId, cmd) {
     var item = cmd.match(/tambah@(.+)\nKODE : (.+)\nUKURAN : (.+)\nTOKO : (.+)\nPIC : (.+)\nSTATUS : (.+)/mi);
     var sort = false;
     if (item[1] != '' && item[2] != '' && item[3] != '' && item[4] != '' && item[5] != '' && item[6] != '') {
-        x = true;
         var cekNo = cek(item[1]);
         if (cekNo == '') {
             sort = true;
@@ -92,7 +91,6 @@ function hapus(chtId, cmd) {
 //fungsi cari data pnt
 function caripnt(chtId, cmd) {
     var txt = '';
-    var item = cmd.match(/caripnt/i);
     var cekData = false;
     var rs = bacaData();
     for (var i = 0; i < rs.length; i++) {
@@ -131,7 +129,6 @@ function caripnt(chtId, cmd) {
 //fungsi cari data spd
 function carispd(chtId, cmd) {
     var txt = '';
-    var item = cmd.match(/carispd/i);
     var cekData = false;
     var rs = bacaData();
     for (var i = 0; i < rs.length; i++) {
@@ -170,7 +167,6 @@ function carispd(chtId, cmd) {
 //fungsi cari data proses
 function cariproses(chtId, cmd) {
     var txt = '';
-    var item = cmd.match(/cariproses/i);
     var cekData = false;
     var rs = bacaData();
     for (var i = 0; i < rs.length; i++) {
@@ -201,7 +197,6 @@ function cariproses(chtId, cmd) {
 //fungsi cari data done
 function caridone(chtId, cmd) {
     var txt = '';
-    var item = cmd.match(/caridone/i);
     var cekData = false;
     var rs = bacaData();
     for (var i = 0; i < rs.length; i++) {
@@ -232,7 +227,6 @@ function caridone(chtId, cmd) {
 //fungsi cari data cetak
 function caricetak(chtId, cmd) {
     var txt = '';
-    var item = cmd.match(/caricetak/i);
     var cekData = false;
     var rs = bacaData();
     for (var i = 0; i < rs.length; i++) {
@@ -271,7 +265,6 @@ function caricetak(chtId, cmd) {
 //fungsi cari semua data
 function cariall(chtId, cmd) {
     var txt = '';
-    var item = cmd.match(/cariall/i);
     var rs = bacaData();
     for (var x = 0; x < rs.length; x++) {
         var emoji = '';
